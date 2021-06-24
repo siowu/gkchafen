@@ -1,0 +1,282 @@
+/* Space out content a bit */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 20px;
+    background: #f2f2f2;
+    font-family: "微软雅黑", "宋体";
+}
+
+.container {
+    padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header, .marketing, .footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+    padding: 10px 9px;
+    border-bottom: 1px solid #e7e7e7;
+    background: #fff;
+    display: none;
+}
+
+.header img {
+    height: 41px;
+    width: auto;
+    max-width: 376px;
+}
+
+/* Custom page footer */
+.footer {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0 0 18px;
+}
+
+.jumbotron {
+    background: #fff;
+    padding: 10px !important;
+    text-align: center;
+    margin-bottom: 73px;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.jumbotron h4 {
+    margin: 20px 0 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.jumbotron .ttt {
+    color: #666;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.jumbotron h1 {
+    margin: 10px;
+    color: #1a9fff;
+}
+
+.jumbotron .input-group {
+    width: auto;
+    max-width: 355px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.jumbotron .input-group .input-group-addon {
+    min-width: 90px;
+    background: #f5f5f5;
+    font-size: 14px !important;
+}
+
+.jumbotron .input-group .form-control {
+    font-size: 13px !important;
+}
+
+.jumbotron p {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+
+.thumbnail {
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.ad {
+    width: 355px;
+    margin: 0 auto;
+    display: none;
+}
+
+.tittle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.title_name {
+    color: #22adb5;
+    padding: 0 10px 0 0;
+    display: inline-block;
+    text-align: right;
+}
+
+.title_text {
+    display: inline-block;
+    text-align: left;
+    color: #666;
+    margin-right: 40px;
+}
+
+.title_text:last-child {
+    margin: 0;
+}
+
+.table01 {
+    display: table;
+    width: 355px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.table02 {
+    display: none;
+}
+
+.table02 th, .table01 th {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    background: #f5f5f5;
+    border: 1px solid #e7e7e7 !important;
+}
+
+.table01 th {
+    text-align: left;
+    padding-left: 20px !important;
+    font-size: 14px;
+}
+
+.table02 td, .table01 td {
+    color: #ffa007;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #e7e7e7 !important;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+
+.jumbotron .btn {
+    padding: 18px 0;
+    font-size: 18px;
+    line-height: 18px;
+    background: #1a9fff;
+    height: 54px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 355px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.ps2 {
+    display: none;
+}
+
+.ps1 {
+    display: block;
+}
+
+.text-danger {
+    color: #fe3116 !important;
+    margin-top: -10px;
+    display: block;
+    height: 18px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header, .marketing, .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .header {
+        border: none;
+        padding: 40px 0;
+        background: none;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .jumbotron {
+        border: 1px solid #ddd;
+        border-radius: 6px !important;
+        padding: 10px 20px !important;
+        margin-bottom: 30px;
+    }
+
+    .ad {
+        width: 100%;
+        display: block;
+    }
+
+    .jumbotron h4 {
+        margin: 40px 0;
+        font-size: 18px;
+    }
+
+    .jumbotron h1 {
+        color: #22adb5;
+        margin: 0;
+    }
+
+    .jumbotron .ttt {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    .header {
+        text-align: center;
+        display: block;
+    }
+
+    .header img {
+        width: 376px;
+        height: auto;
+    }
+
+    .ps2, .tittle {
+        display: block;
+    }
+
+    .ps1, .table01 {
+        display: none;
+    }
+
+    .jumbotron .btn {
+        background: #22adb5;
+    }
+
+    .table02 {
+        display: table;
+    }
+}

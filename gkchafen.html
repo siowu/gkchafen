@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <meta name="author" content="">
+    <title id="title">江苏省高考查分</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/open/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/open/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/open/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
+    <script src="js/open/ie-emulation-modes-warning.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/open/flipclock.css">
+    <link rel="stylesheet" type="text/css" href="css/open/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/open/default.css">
+    <script src="js/open/jquery.min.js"></script>
+    <script src="js/open/flipclock.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/open/html5shiv.min.js"></script>
+    <script src="js/open/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="container">
+    <div class="header"><img src="images/logo.png" width="80%" height="auto"
+                             alt=""/></div>
+    <div class="jumbotron">
+        <h4>距离江苏省<span id="year" name="year"></span>年普通高校招生全国统一考试成绩发布还有</h4>
+<!--        <h4>距离江苏省2021</span>年高考考试成绩发布还有</h4>-->
+        <input type="hidden" value="2021/06/24 20:00:00" id="pageTime"/>
+        <div class="htmleaf-container" style="margin:50px auto 40px;">
+            <div class="htmleaf-content">
+                <div class="clock" style="margin:1em;"></div>
+                <div class="message"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var clock;
+            $(document).ready(function () {
+                var clock;
+
+                clock = $('.clock').FlipClock({
+                    clockFace: 'DailyCounter',
+                    autoStart: false,
+                    callbacks: {
+                        stop: function () {
+                            $('.message').html('The clock has stopped!')
+                        }
+                    }
+                });
+                var ts = new Date($("#pageTime").val()).getTime() - new Date().getTime();
+                if (ts > 86400000 * 99.99999) {
+                    ts = 86400000 * 99.99999 - 1000;
+                    clock.setTime(ts / 1000);
+                    clock.setCountdown(true);
+                    clock.start();
+                } else {
+                    clock.setTime(ts / 1000);
+                    clock.setCountdown(true);
+                    clock.start();
+                }
+
+
+            });
+
+
+            $(function () {
+                var year = "2021/06/24 20:00:00".slice(0,4);
+                $("#year").text(year);
+                $("#title").text("江苏省"+year+"年普通高校招生全国统一考试成绩查询");
+            })
+        </script>
+    </div>
+    <div class="ad"><img class="ad" src="images/Aaa.png" width="100%" alt=""/>
+    </div>
+    <footer class="footer">
+        <p class="ps1">本服务由江苏省教育考试院提供<br>苏ICP备:06030385</p>
+        <p class="ps2">主办单位:江苏省教育考试院&nbsp;&nbsp;&nbsp;&nbsp;地址:江苏省南京市北京西路15-2号&nbsp;&nbsp;&nbsp;&nbsp;苏ICP备:06030385 </p>
+    </footer>
+</div>
+<!-- /container -->
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/open/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
